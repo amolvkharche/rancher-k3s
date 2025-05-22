@@ -1,4 +1,4 @@
-#### To install Rancher v2.9.2 on Ubuntu, Below is a step-by-step guide using K3s (lightweight Kubernetes) on Ubuntu.
+#### To install Rancher on Ubuntu, Below is a step-by-step guide using K3s (lightweight Kubernetes) on Ubuntu.
 
 Step 1: Install K3s (Lightweight Kubernetes)
  ```bash
