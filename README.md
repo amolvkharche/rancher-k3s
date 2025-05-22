@@ -51,6 +51,10 @@ kubectl create namespace cattle-system
 To install a specific Rancher version, use the **--version** flag (e.g., --version 2.9.2). Otherwise, the latest Rancher is installed by default
 
 ```bash
-helm install rancher rancher-stable/rancher  --namespace cattle-system  --set hostname=<IP_OF_LINUX_NODE>.sslip.io> --set replicas=1 --set bootstrapPassword=Rancher@1234 --version 2.10.2
+helm install rancher rancher-stable/rancher  --namespace cattle-system
+--set hostname=<IP_OF_LINUX_NODE>.sslip.io> \
+--set replicas=1 \
+--set bootstrapPassword=Rancher@1234 \
+--version 2.10.2
 ```
 
