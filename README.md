@@ -4,9 +4,9 @@ Step 1: Install K3s (Lightweight Kubernetes)
  ```bash
 curl -sfL https://get.k3s.io | sh - 
 ```
-
+If you want to install specific kubernetes version 
  ```bash
-# curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.30.1+k3s1" sh -
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.30.1+k3s1" sh -
 ```
 
 Wait until it's ready:
