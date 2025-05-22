@@ -17,6 +17,7 @@ else
 fi
 
 echo "Setting up kubeconfig for the current user..."
+mkdir ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown "$USER":"$USER" ~/.kube/config
 chmod 600 ~/.kube/config # Set appropriate permissions for kubeconfig
