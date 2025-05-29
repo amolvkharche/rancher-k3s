@@ -58,3 +58,7 @@ helm install rancher rancher-stable/rancher  --namespace cattle-system
 --version 2.10.2
 ```
 
+#### To uninstall K3s from a server node, run:
+```bash
+/usr/local/bin/k3s-uninstall.sh
+```
