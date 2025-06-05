@@ -4,7 +4,6 @@ set -e
 
 echo "Starting Rancher installation script..."
 
-# --- Step 1: Install K3s ---
 echo "--- Step 1: Installing K3s (Lightweight Kubernetes) ---"
 read -p "Enter desired K3s version (e.g., v1.30.1+k3s1, leave empty for latest): " K3S_VERSION
 
@@ -16,11 +15,12 @@ else
     curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="$K3S_VERSION" sh -
 fi
 
+
 echo "Setting up kubeconfig for the current user..."
-mkdir ~/.kube
+mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown "$USER":"$USER" ~/.kube/config
-chmod 600 ~/.kube/config # Set appropriate permissions for kubeconfig
+chmod 600 ~/.kube/config
 echo "Kubeconfig set up successfully."
 
 echo "Waiting for K3s nodes to be ready..."
@@ -53,7 +53,7 @@ echo "Cert-Manager is ready."
 
 echo "--- Step 5: Installing Rancher via Helm ---"
 echo "Creating 'cattle-system' namespace..."
-kubectl create namespace cattle-system || true 
+kubectl create namespace cattle-system || true
 echo "'cattle-system' namespace ensured."
 
 read -p "Enter the IP address of your Linux node (e.g., 192.168.1.100): " LINUX_NODE_IP
@@ -64,11 +64,13 @@ if [ -z "$LINUX_NODE_IP" ]; then
 fi
 
 RANCHER_VERSION="2.11.2"
-BOOTSTRAP_PASSWORD="Rancher@1234" 
+BOOTSTRAP_PASSWORD="Rancher@1234"
 
 echo "Installing Rancher version $RANCHER_VERSION..."
 echo "Using hostname: $LINUX_NODE_IP.sslip.io"
 echo "Using bootstrap password: $BOOTSTRAP_PASSWORD"
+
+sleep 5
 
 helm install rancher rancher-stable/rancher \
   --namespace cattle-system \
