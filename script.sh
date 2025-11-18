@@ -63,7 +63,7 @@ if [ -z "$LINUX_NODE_IP" ]; then
     exit 1
 fi
 
-RANCHER_VERSION="2.12.1"
+RANCHER_VERSION="2.12.2"
 BOOTSTRAP_PASSWORD="Rancher@1234"
 
 echo "Installing Rancher version $RANCHER_VERSION..."
