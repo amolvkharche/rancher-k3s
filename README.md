@@ -35,7 +35,7 @@ helm repo update
 
 Step 4: Install Cert-Manager
  ```bash
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.18.2/cert-manager.yaml
 ```
 
 Wait for it to become ready:
@@ -48,7 +48,7 @@ First create namespace
  ```bash
 kubectl create namespace cattle-system
 ```
-To install a specific Rancher version, use the **--version** flag (e.g., --version 2.9.2). Otherwise, the latest Rancher is installed by default
+To install a specific Rancher version, use the **--version** flag (e.g., --version 2.12.2). Otherwise, the latest Rancher is installed by default
 
 ```bash
 helm install rancher rancher-stable/rancher  --namespace cattle-system \
