@@ -24,7 +24,7 @@ sudo chown $USER:$USER ~/.kube/config
 
 Step 2: Install Helm
  ```bash
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 | bash
 ```
 
 Step 3: Set up Rancher Helm Chart Repo
@@ -35,7 +35,7 @@ helm repo update
 
 Step 4: Install Cert-Manager
  ```bash
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.18.2/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.19.2/cert-manager.yaml
 ```
 
 Wait for it to become ready:
