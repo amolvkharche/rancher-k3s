@@ -35,7 +35,7 @@ helm repo update
 
 Step 4: Install Cert-Manager
  ```bash
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.19.2/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.20.3/cert-manager.yaml
 ```
 
 Wait for it to become ready:
