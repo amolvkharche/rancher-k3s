@@ -42,7 +42,7 @@ helm repo update
 
 echo "--- Step 4: Installing Cert-Manager ---"
 echo "Applying Cert-Manager manifest..."
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.18.2/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.19.2/cert-manager.yaml
 echo "Waiting for Cert-Manager deployment to be ready..."
 kubectl_n_cert_manager_rollout_status_deploy_cert_manager="kubectl -n cert-manager rollout status deploy/cert-manager"
 until $kubectl_n_cert_manager_rollout_status_deploy_cert_manager; do
@@ -63,7 +63,7 @@ if [ -z "$LINUX_NODE_IP" ]; then
     exit 1
 fi
 
-RANCHER_VERSION="2.12.2"
+RANCHER_VERSION="2.13.2"
 BOOTSTRAP_PASSWORD="Rancher@1234"
 
 echo "Installing Rancher version $RANCHER_VERSION..."
