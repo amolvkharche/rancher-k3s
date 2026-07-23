@@ -59,7 +59,7 @@ helm install rancher rancher-stable/rancher  --namespace cattle-system \
 --set hostname=<IP_OF_LINUX_NODE>.sslip.io> \
 --set replicas=1 \
 --set bootstrapPassword=Rancher@1234 \
---version 2.11.2
+--version 2.14.2
 ```
 
 ## Uninstalling K3s
