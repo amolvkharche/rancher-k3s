@@ -21,7 +21,11 @@ Export kubeconfig for your user:
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown $USER:$USER ~/.kube/config
 ```
+Join a Worker Node, On each worker node, replace <SERVER_IP> and <NODE_TOKEN> with the appropriate values and run:
 
+```bash
+curl -sfL https://get.k3s.io | K3S_URL=https:// <SERVER_IP>:6443 K3S_TOKEN=<NODE_TOKEN> sh -
+```
 Step 2: Install Helm
  ```bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 | bash
