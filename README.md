@@ -56,7 +56,7 @@ To install a specific Rancher version, use the **--version** flag (e.g., --versi
 
 ```bash
 helm install rancher rancher-stable/rancher  --namespace cattle-system \
---set hostname=<IP_OF_LINUX_NODE>.sslip.io> \
+--set hostname=<IP>.sslip.io> \
 --set replicas=1 \
 --set bootstrapPassword=Rancher@1234 \
 --version 2.14.2
