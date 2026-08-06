@@ -18,6 +18,7 @@ sudo kubectl get nodes
 Export kubeconfig for your user:
 
 ```bash
+sudo mkdir ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown $USER:$USER ~/.kube/config
 ```
